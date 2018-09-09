@@ -45,7 +45,10 @@
                 <behavior key="OcultarDatosCliente">
                     <widget keyForSave="NombreCliente" visible="false" />
                     <widget keyForSave="TelefonoCliente" visible="false" />
-                </behavior>   
+                </behavior>
+                <behavior key="SoloLecturaNombreCliente">
+                    <widget KeyForSave="NombreCliente" readonly = "false"/> 
+                </behavior>
             </behaviors>
         </FormiikExpressionLanguage>
         <Subform Name="Solicitud" Caption="Solicitud">
