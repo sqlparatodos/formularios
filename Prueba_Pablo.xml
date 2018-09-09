@@ -1,0 +1,175 @@
+<XFA
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" noNamespaceSchemaLocation="XFA.xsd">
+    <Template Name="Prueba_Pablo" Version="1.0" Caption="Prueba_Pablo">
+        <FormiikExpressionLanguage>
+            <variables>
+                <!--<var key="" keyForSave="" type="number o string"  default="" />-->
+                <var key="VarTieneNegocioEnDomicilio" keyForSave="TieneNegocioEnDomicilio" type="string" />
+                <var key="VarTipoLocal" keyForSave="TipoLocal" type="string" />
+            </variables>
+            <expressions>
+               
+                <exp key="ExpVisualizacionNegocioEnDomicilio" value="
+                    if(      
+                    equals(#{VarTieneNegocioEnDomicilio}, 'Si')
+                        ,behavior('MostrarDireccionNegocio')       
+                        ,behavior('OcultarDireccionNegocio')       
+                       )" 
+                />
+                
+                <exp key="ExpVisualizacionDatosCliente" value="
+                    if(      
+                    equals(#{VarTipoLocal}, 'A')
+                    &amp;&amp;
+                    equals(#{VarTieneNegocioEnDomicilio},'Si')
+                        ,behavior('MostrarDatosCliente')       
+                        ,behavior('OcultarDatosCliente')       
+                       )" 
+                />
+            </expressions>
+            <behaviors>
+                <!--One or more repetitions:-->
+                <behavior key="MostrarDireccionNegocio">
+                    <widget keyForSave="DireccionNegocio" visible="true" />
+                    <widget keyForSave="TipoLocal" visible="true" />
+                </behavior>    
+                <behavior key="OcultarDireccionNegocio">
+                    <widget keyForSave="DireccionNegocio" visible="false" />
+                    <widget keyForSave="TipoLocal" visible="false" />
+                </behavior> 
+                
+                <behavior key="MostrarDatosCliente">
+                    <widget keyForSave="NombreCliente" visible="true" />
+                    <widget keyForSave="TelefonoCliente" visible="true" />
+                </behavior>    
+                <behavior key="OcultarDatosCliente">
+                    <widget keyForSave="NombreCliente" visible="false" />
+                    <widget keyForSave="TelefonoCliente" visible="false" />
+                </behavior>   
+            </behaviors>
+        </FormiikExpressionLanguage>
+        <Subform Name="Solicitud" Caption="Solicitud">
+            <Field Name="TieneNegocioEnDomicilio">
+                <UI>
+                    <RadioButton />
+                </UI>
+                <Caption>
+                    <Font Style="Caption" />
+                    <Value>
+                        <Text>¿Tiene negocio en domicilio?</Text>
+                    </Value>
+                </Caption>
+                <Value>
+                    <Dictionary KeyForSave="TieneNegocioEnDomicilio">TieneNegocioEnDomicilio</Dictionary>
+                </Value>
+                <Items>
+                    <Text>Si</Text>
+                    <Text>No</Text>
+                </Items>
+                <Settings>
+                    <add key="readonly" value="false" />
+                    <add key="visible" value="true" />
+                    <add key="sendInResponse" value="visible" />
+                </Settings>
+            </Field>
+            <Field Name="DireccionNegocio">
+                <UI>
+                    <TextEdit />
+                </UI>
+                <Caption>
+                    <Font Style="Caption" />
+                    <Value>
+                        <Text>Dirección</Text>
+                    </Value>
+                </Caption>
+                <Value>
+                    <Text KeyForSave="DireccionNegocio" />
+                </Value>
+                <Settings>
+                    <add key="readonly" value="false" />
+                    <add key="visible" value="false" />
+                    <add key="sendInResponse" value="visible" />
+                    <add key="decimals" value="" />
+                    <add key="numeric" value="false" />
+                    <add key="password" value="false" />
+                    <add key="multiline" value="true" />
+                    <add key="scanner" value="false" />
+                </Settings>
+            </Field>
+            <Field Name="TipoLocal">
+                <UI>
+                    <ChoiceList />
+                </UI>
+                <Caption>
+                    <Font Style="Caption" />
+                    <Value>
+                        <Text>Tipo local</Text>
+                    </Value>
+                </Caption>
+                <Value>
+                    <Text KeyForSave="TipoLocal" />
+                </Value>
+                <Items>
+                    <Text>A,Arrendado</Text>
+                    <Text>P,Propio</Text>
+                </Items>
+                <Settings>
+                    <add key="readonly" value="false" />
+                    <add key="visible" value="false" />
+                    <add key="selectleyend" value="true" />
+                    <add key="scanner" value="false" />
+                    <add key="search" value="false" />
+                    <add key="sendInResponse" value="visible" />
+                </Settings>
+            </Field>
+            <Field Name="NombreCliente">
+                <UI>
+                    <TextEdit />
+                </UI>
+                <Caption>
+                    <Font Style="Caption" />
+                    <Value>
+                        <Text>Nombre cliente</Text>
+                    </Value>
+                </Caption>
+                <Value>
+                    <Text KeyForSave="NombreCliente" />
+                </Value>
+                <Settings>
+                    <add key="readonly" value="false" />
+                    <add key="visible" value="false" />
+                    <add key="sendInResponse" value="visible" />
+                    <add key="decimals" value="" />
+                    <add key="numeric" value="false" />
+                    <add key="password" value="false" />
+                    <add key="multiline" value="true" />
+                    <add key="scanner" value="false" />
+                </Settings>
+            </Field>
+            <Field Name="TelefonoCliente">
+                <UI>
+                    <TextEdit />
+                </UI>
+                <Caption>
+                    <Font Style="Caption" />
+                    <Value>
+                        <Text>Teléfono cliente</Text>
+                    </Value>
+                </Caption>
+                <Value>
+                    <Text KeyForSave="TelefonoCliente" />
+                </Value>
+                <Settings>
+                    <add key="readonly" value="false" />
+                    <add key="visible" value="false" />
+                    <add key="sendInResponse" value="visible" />
+                    <add key="decimals" value="" />
+                    <add key="numeric" value="false" />
+                    <add key="password" value="false" />
+                    <add key="multiline" value="true" />
+                    <add key="scanner" value="false" />
+                </Settings>
+            </Field>
+        </Subform>
+    </Template>
+</XFA>
