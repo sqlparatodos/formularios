@@ -30,12 +30,12 @@
             <behaviors>
                 <!--One or more repetitions:-->
                 <behavior key="MostrarDireccionNegocio">
-                    <widget keyForSave="DireccionNegocio" visible="true" />
-                    <widget keyForSave="TipoLocal" visible="true" />
+                    <widget keyForSave ="DireccionNegocio" visible="true" />
+                    <widget keyForSave ="TipoLocal"        visible="true" />
                 </behavior>    
                 <behavior key="OcultarDireccionNegocio">
-                    <widget keyForSave="DireccionNegocio" visible="false" />
-                    <widget keyForSave="TipoLocal" visible="false" />
+                    <widget keyForSave ="DireccionNegocio" visible="false" />
+                    <widget keyForSave ="TipoLocal"        visible="false" />
                 </behavior> 
                 
                 <behavior key="MostrarDatosCliente">
