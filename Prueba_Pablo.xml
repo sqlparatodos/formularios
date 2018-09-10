@@ -140,8 +140,8 @@
                     <Text KeyForSave="NombreCliente" />
                 </Value>
                 <Settings>
-                    <add key="readonly" value="false" />
-                    <add key="visible" value="false" />
+                    <add key="readonly" value="true" />
+                    <add key="visible" value="true" />
                     <add key="sendInResponse" value="visible" />
                     <add key="decimals" value="" />
                     <add key="numeric" value="false" />
@@ -164,8 +164,8 @@
                     <Text KeyForSave="TelefonoCliente" />
                 </Value>
                 <Settings>
-                    <add key="readonly" value="false" />
-                    <add key="visible" value="false" />
+                    <add key="readonly" value="true" />
+                    <add key="visible" value="true" />
                     <add key="sendInResponse" value="visible" />
                     <add key="decimals" value="" />
                     <add key="numeric" value="false" />
