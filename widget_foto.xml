@@ -1,0 +1,29 @@
+<Field Name="URL_FOTO_VOL_PAGO_3">
+    <UI>
+        <ImageEdit />
+    </UI>
+    <Caption>
+        <Font Style="Caption" />
+        <Value>
+            <Text>Se debe definir imagenes en esta sección</Text>
+        </Value>
+    </Caption>
+    <Value>
+        <Text KeyForSave="URL_FOTO_VOL_PAGO_3" />
+    </Value>
+    <Settings>
+        <add key="priority" value="a" />
+        <add key="quality" value="baja" />
+        <add key="signdate" value="false" />
+        <add key="signexternalid" value="false" />
+        <add key="monochrome" value="false" />
+        <add key="showPreview" value="false" />
+        <add key="counter" value="0" />
+        <add key="sharpness" value="80" />
+        <add key="validateSharpness" value="error" />
+        <add key="sendInResponse" value="visible" />
+        <add key="compression" value="70" />
+        <add key="orientation" value="portrait" />
+        <add key="fillResolutionOrientation" value="false" />
+    </Settings>
+</Field>
