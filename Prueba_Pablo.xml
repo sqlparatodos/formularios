@@ -3,7 +3,7 @@
     <Template Name="Prueba_Pablo" Version="1.0" Caption="Prueba_Pablo">
         <FormiikExpressionLanguage>
             <variables>
-                <!-- Aqui es donde se definen as variables -->
+                <!-- Aqui es donde se definen as variables para beneplacito de todos -->
                 <!--<var key="" keyForSave="" type="number o string"  default="" />-->
                 <var key="VarTieneNegocioEnDomicilio" keyForSave="TieneNegocioEnDomicilio" type="string" />
                 <var key="VarTipoLocal" keyForSave="TipoLocal" type="string" />
